@@ -1,0 +1,251 @@
+/* .titlecards{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+.titlecards h2{
+    margin-bottom: 8px;
+}
+.card-list{
+    display: flex;
+    gap:10px;
+    overflow-x: scroll;
+}
+.card-list::-webkit-scrollbar{
+    display: none;
+}
+.card-list img{
+    width: 240px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.card-list .card{
+    position: relative;
+}
+.card-list .card p{
+    position:absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.titlecards {
+    position: relative;
+    padding: 20px;
+  }
+  
+  .scroll-controls {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+  
+  .card-list {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    padding: 10px 0;
+    scrollbar-width: none; 
+  }
+  
+  .card-list::-webkit-scrollbar {
+    display: none; 
+  }
+  
+  .card {
+    flex: 0 0 auto;
+    width: 200px;
+  }
+  
+  .card img {
+    width: 100%;
+    border-radius: 6px;
+  }
+  
+
+  .scroll-btn {
+    border: none;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 2;
+    border-radius: 50%;
+   
+  }
+  
+  .scroll-btn:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .scroll-btn.left {
+    margin-right: 10px;
+  }
+  
+  .scroll-btn.right {
+    margin-left: 10px;
+  }
+  @media (max-width:800px){
+    .titlecards{
+      margin-top: 20px;
+      margin-bottom: 0;
+    }
+    .titlecards h2{
+      font-size: 20px;
+    }
+    .card-list img{
+      width: 200px;
+    }
+    .card-list p{
+      font-size: 12px;
+    }
+  }
+  @media (max-width:500px){
+  
+    .titlecards h2{
+      font-size: 15px;
+    }
+    .card-list img{
+      width: 165px;
+    }
+    .card-list p{
+      font-size: 10px;
+    }
+  }
+   */
+
+/* Custom properties for consistency */
+:root {
+  --card-width: 240px;
+  --card-width-md: 200px;
+  --card-width-sm: 165px;
+  --card-gap: 12px;
+  --title-margin-top: 50px;
+  --title-margin-bottom: 30px;
+  --font-size-title: 24px;
+  --font-size-title-md: 20px;
+  --font-size-title-sm: 15px;
+  --font-size-caption: 16px;
+  --font-size-caption-md: 12px;
+  --font-size-caption-sm: 10px;
+}
+
+/* TitleCards container */
+.titlecards {
+  position: relative;
+  padding: 20px;
+  margin-top: var(--title-margin-top);
+  margin-bottom: var(--title-margin-bottom);
+}
+
+.titlecards h2 {
+  margin-bottom: 8px;
+  font-size: var(--font-size-title);
+}
+
+/* Card List container */
+.card-list {
+  display: flex;
+  gap: var(--card-gap);
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+  padding: 10px 0;
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.card-list::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in Chrome/Safari */
+}
+
+/* Individual Card */
+.card {
+  flex: 0 0 auto;
+  width: var(--card-width);
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 6px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Card caption text */
+.card p {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: var(--font-size-caption);
+  text-decoration: none;
+}
+
+/* Scroll Buttons */
+.scroll-controls {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.scroll-btn {
+  border: none;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 2;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-btn.left {
+  margin-right: 10px;
+}
+
+.scroll-btn.right {
+  margin-left: 10px;
+}
+
+/* Responsive adjustments for medium screens up to 800px */
+@media (max-width: 800px) {
+  .titlecards {
+    margin-top: 20px;
+    margin-bottom: 0;
+    padding: 15px;
+  }
+  .titlecards h2 {
+    font-size: var(--font-size-title-md);
+  }
+  .card-list {
+    gap: 10px;
+  }
+  .card {
+    width: var(--card-width-md);
+  }
+  .card p {
+    font-size: var(--font-size-caption-md);
+  }
+}
+
+/* Responsive adjustments for small screens up to 500px */
+@media (max-width: 500px) {
+  .titlecards h2 {
+    font-size: var(--font-size-title-sm);
+  }
+  .card {
+    width: var(--card-width-sm);
+  }
+  .card p {
+    font-size: var(--font-size-caption-sm);
+  }
+}

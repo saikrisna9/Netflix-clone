@@ -1,0 +1,255 @@
+/* .hero{
+    position: relative;
+}
+.banner-img{
+    width: 100%;
+    mask-image: linear-gradient(to right,transparent,black 75%);
+    -webkit-mask-image: linear-gradient(to right,transparent,black 75%);
+}
+.hero-caption{
+    position: absolute;
+    width: 100%;
+    padding-left: 6%;
+    bottom: 0;
+}
+.caption-img{
+    width: 90%;
+    max-width: 420px;
+    margin-bottom: 30px;
+}
+.hero-caption p{
+    max-width: 700px;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+.hero-buttons{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+
+}
+.hero-buttons .btn {
+    border: 0;
+    outline: 0;
+    padding: 5px 12px;         
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;                   
+    font-size: 13px;          
+    font-weight: 600;
+    background: white;
+    border-radius: 4px;
+    cursor: pointer;
+  
+}
+
+.hero-buttons .btn img {
+    width: 18px;                
+    height: 20px;
+}
+
+.hero-buttons .btn.dark-btn {
+    color: #fff;
+    background: #6d6d6eb3;
+}
+.hero-buttons .btn:hover{
+    background: #ffffffbf;
+}
+.hero-buttons .btn.dark-btn:hover{
+    background: #6d6d6e66;
+}
+.more-cards{
+    padding-left: 6%;
+}
+@media (max-width:1024px) {
+    .hero-caption .title-cards{
+        display: none;
+    }
+    .hero-buttons{
+        margin-bottom: 30px;
+    }
+}
+@media (max-width: 800px){
+    .hero-caption{
+        padding-left: 4%;
+    }
+    .caption-img{
+        margin-bottom: 10px;
+        width:40%;
+    }
+    .hero-caption p{
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .hero-buttons .btn img{
+        width: 20px;
+    }
+    .more-cards{
+        padding: 4%;
+    }
+}
+@media (max-width:500px) {
+    .caption-img{
+        display: none;
+    }
+    .hero-buttons .btn img{
+        width: 15px;
+    }
+    .hero-buttons.btn{
+        padding: 4px 10px;
+        gap:5px;
+        font-size: 10px;
+    }
+    
+} */
+ /* Define custom properties for colors and spacing */
+:root {
+    --primary-bg: white;
+    --primary-text: #000;
+    --secondary-bg: #6d6d6eb3;
+    --secondary-bg-hover: #6d6d6e66;
+    --btn-padding: 5px 12px;
+    --btn-font-size: 13px;
+    --btn-font-weight: 600;
+    --transition-speed: 0.3s;
+  }
+  
+  /* Hero Section */
+  .hero {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* Banner Image with a mask gradient */
+  .banner-img {
+    width: 100%;
+    object-fit: cover;
+    mask-image: linear-gradient(to right, transparent, black 75%);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 75%);
+  }
+  
+  /* Hero Caption Container */
+  .hero-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-left: 6%;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  }
+  
+  /* Title Image */
+  .caption-img {
+    width: 90%;
+    max-width: 420px;
+    margin-bottom: 30px;
+  }
+  
+  /* Hero Description */
+  .hero-caption p {
+    max-width: 700px;
+    font-size: 17px;
+    margin-bottom: 20px;
+    color: var(--primary-bg);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  /* Hero Buttons */
+  .hero-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 50px;
+  }
+  
+  .hero-buttons .btn {
+    border: none;
+    outline: none;
+    padding: var(--btn-padding);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: var(--btn-font-size);
+    font-weight: var(--btn-font-weight);
+    background: var(--primary-bg);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background var(--transition-speed);
+  }
+  
+  .hero-buttons .btn img {
+    width: 18px;
+    height: 20px;
+  }
+  
+  /* Dark Button Variant */
+  .hero-buttons .btn.dark-btn {
+    color: var(--primary-bg);
+    background: var(--secondary-bg);
+  }
+  
+  .hero-buttons .btn:hover {
+    background: rgba(255, 255, 255, 0.75);
+  }
+  
+  .hero-buttons .btn.dark-btn:hover {
+    background: var(--secondary-bg-hover);
+  }
+  
+  /* More Cards Section */
+  .more-cards {
+    padding-left: 6%;
+  }
+  
+  /* Responsive Adjustments */
+  
+  /* For screens up to 1024px */
+  @media (max-width: 1024px) {
+    .hero-caption .title-cards {
+      display: none;
+    }
+    .hero-buttons {
+      margin-bottom: 30px;
+    }
+  }
+  
+  /* For screens up to 800px */
+  @media (max-width: 800px) {
+    .hero-caption {
+      padding-left: 4%;
+      padding-bottom: 20px;
+    }
+    .caption-img {
+      margin-bottom: 10px;
+      width: 40%;
+    }
+    .hero-caption p {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
+    .hero-buttons .btn img {
+      width: 20px;
+    }
+    .more-cards {
+      padding-left: 4%;
+      padding-right: 4%;
+    }
+  }
+  
+  /* For screens up to 500px */
+  @media (max-width: 500px) {
+    .caption-img {
+      display: none;
+    }
+    .hero-buttons .btn {
+      padding: 4px 10px;
+      gap: 5px;
+      font-size: 10px;
+    }
+    .hero-buttons .btn img {
+      width: 15px;
+    }
+  }
+  

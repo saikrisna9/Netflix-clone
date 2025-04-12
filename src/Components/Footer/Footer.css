@@ -1,0 +1,105 @@
+/* .footer{
+    padding: 30px 4%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.footer-icons{
+    display: flex;
+    gap: 20px;
+    margin: 40px 0;
+}
+.footer-icons img{
+    width: 30px;
+    cursor:  pointer;
+}
+.footer ul{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 15px;
+    margin-bottom: 30px;
+    list-style: none;
+}
+.copyright-text{
+    color: gray;
+    font-size: 14px;
+}
+@media (max-width:800px) {
+    .footer-icons img{
+        width: 25px;
+    }
+    .footer ul{
+        grid-template-columns: auto auto;
+        gap: 8px;
+        font-size: 14px;
+    }
+    
+} */
+ /* Define custom properties for the footer */
+:root {
+    --footer-padding: 30px 4%;
+    --max-footer-width: 1000px;
+    --icon-size: 30px;
+    --icon-size-mobile: 25px;
+    --gap-large: 20px;
+    --gap-medium: 15px;
+    --gap-small: 8px;
+    --copyright-color: gray;
+    --copyright-font-size: 14px;
+  }
+  
+  /* Footer Container */
+  .footer {
+    padding: var(--footer-padding);
+    max-width: var(--max-footer-width);
+    margin: 0 auto;
+  }
+  
+  /* Footer Icons Section */
+  .footer-icons {
+    display: flex;
+    gap: var(--gap-large);
+    margin: 40px 0;
+  }
+  
+  .footer-icons img {
+    width: var(--icon-size);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  
+  .footer-icons img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Footer Links List */
+  .footer ul {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: var(--gap-medium);
+    margin-bottom: 30px;
+    list-style: none;
+    padding: 0;
+    font-size: 16px;
+  }
+  
+  /* Copyright Text */
+  .copyright-text {
+    color: var(--copyright-color);
+    font-size: var(--copyright-font-size);
+    text-align: center;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 800px) {
+    .footer-icons img {
+      width: var(--icon-size-mobile);
+    }
+    
+    .footer ul {
+      grid-template-columns: repeat(2, auto);
+      gap: var(--gap-small);
+      font-size: 14px;
+      justify-content: center;
+    }
+  }
+  
